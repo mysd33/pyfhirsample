@@ -17,8 +17,8 @@ import logging
 def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s:%(name)s - %(message)s")
   
-	# 診療情報提供書のHL7 FHIRのサンプルデータを読み込み
-	# Bundle-BundleReferralExample01.json    
+    # 診療情報提供書のHL7 FHIRのサンプルデータを読み込み
+    # Bundle-BundleReferralExample01.json    
     filename = pathlib.Path("Bundle-BundleReferralExample01.json")
     # Bundleリソースを解析    
     bundle = Bundle.parse_file(filename)
@@ -58,10 +58,6 @@ def main():
                 else:
                     logging.info("患者カナ氏名: %s", humanName.text)
         # TODO: リソース毎に処理の追加        
-
         
-
-
-
 if __name__ == '__main__':
     main()
